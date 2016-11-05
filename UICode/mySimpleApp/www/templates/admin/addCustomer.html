@@ -1,0 +1,105 @@
+<ion-view view-title="Customer">
+  <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero" style="background-color: #5BC2CB; height: 200px;">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/user.png');"></div>
+                <h3><a class="light">Mr Ajay Giri</a></h3>
+                <h4>Admin</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ng-click="changeMode('add')" class="tab-item">
+                <i class="icon ion-android-add-circle"></i> Create
+            </a>
+            <a ng-click="changeMode('edit')" class="tab-item">
+                <i class="icon ion-edit"></i> Edit
+            </a>
+            <a ng-click="changeMode('remove')" class="tab-item">
+                <i class="icon ion-ios-trash-outline"></i> Remove
+            </a>
+        </div>
+    <form ng-submit="" ng-show="customer.mode === 'add'">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="customer.firstName" placeholder="First Name">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="customer.lastName" placeholder="Last Name">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Address</span>
+          <input type="text" ng-model="customer.address" placeholder="Address">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Landmark</span>
+          <input type="text" ng-model="customer.landmark" placeholder="Landmark">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Mobile</span>
+          <input type="text" ng-model="customer.mobile" placeholder="Mobile">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive"  type="submit">CREATE</button>
+        </label>
+      </div>
+    </form>
+
+    <form ng-submit="" ng-show="customer.mode === 'edit'">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="customer.firstName" placeholder="First Name">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="customer.lastName" placeholder="Last Name">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Address</span>
+          <input type="text" ng-model="customer.address" placeholder="Address">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Landmark</span>
+          <input type="text" ng-model="customer.landmark" placeholder="Landmark">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Mobile</span>
+          <input type="text" ng-model="customer.mobile" placeholder="Mobile">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive"  type="submit">EDIT</button>
+        </label>
+      </div>
+    </form>
+
+    <form ng-submit="" ng-show="customer.mode === 'remove'">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="customer.firstName" placeholder="First Name">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="customer.lastName" placeholder="Last Name">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Address</span>
+          <input type="text" ng-model="customer.address" placeholder="Address" ng-disabled="true">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Landmark</span>
+          <input type="text" ng-model="customer.landmark" placeholder="Landmark" ng-disabled="true">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Mobile</span>
+          <input type="text" ng-model="customer.mobile" placeholder="Mobile" ng-disabled="true">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive"  type="submit">REMOVE</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

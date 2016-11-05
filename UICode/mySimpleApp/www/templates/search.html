@@ -1,0 +1,20 @@
+<ion-view view-title="Search">
+  <ion-content>
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-model="searchEmail.name" placeholder="Email" class="filterEmail" ng-show="showFilter">
+        </label>
+        <button class="button icon ion-gear-a" ng-click="showFilter = !showFilter">
+        </button>
+      </div>
+    </div>
+    <div class="list">
+            <a ui-sref="app.userInfo" ng-repeat="cust in customerList | filter:searchEmail:strict"
+            ng-click="selectedFilteredUser(cust)" class="item item-avatar item-icon-right">
+                <img src="img/customer.png">
+                <h2>{{cust.name}}</h2>
+            </a>
+    </div>
+  </ion-content>
+</ion-view>

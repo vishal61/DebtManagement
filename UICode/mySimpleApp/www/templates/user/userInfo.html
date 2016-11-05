@@ -1,0 +1,32 @@
+<ion-view view-title="User Info">
+  <ion-header-bar>
+    <div class="buttons">
+      <button class="button button-clear btn-header-close" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="selectedUser.name" placeholder="Username">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Area</span>
+          <input type="text" ng-model="selectedUser.area" placeholder="Area">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Landmark</span>
+          <input type="text" ng-model="selectedUser.landmark" placeholder="Landmark">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Total Due</span>
+          <input type="text"  placeholder="Total Due">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive"  type="submit">Add Info</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
