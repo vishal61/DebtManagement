@@ -1,0 +1,6 @@
+.bar-header{
+	background-color: #5BC2CB;
+}
+.menu-open .bar.bar-header.expanded {
+    background-color: #5BC2CB !important;
+}

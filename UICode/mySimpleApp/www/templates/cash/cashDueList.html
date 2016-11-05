@@ -1,0 +1,33 @@
+<ion-view view-title="Cash Due List">
+  <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero" style="background-color: #5BC2CB; height: 200px;">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/user.png');"></div>
+                <h3><a class="light">Mr Ajay Giri</a></h3>
+                <h4>Admin</h4>
+            </div>
+        </div>
+        <!--<div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.activity" class="tab-item">
+                <i class="icon ion-arrow-graph-up-right"></i> Activity
+            </a>
+            <a ui-sref="app.friends" class="tab-item">
+                <i class="icon ion-android-people"></i> Friends
+            </a>
+            <a ui-sref="app.gallery" class="tab-item">
+                <i class="icon ion-images"></i> Photos
+            </a>
+        </div> -->
+        <div ng-repeat="(dateKey, dateInfo) in grpByDueList">
+            <h4 class="content padding double-padding-x">{{getDate(dateKey)}}</h4>
+            <div class="list">
+                <a ng-repeat="user in dateInfo" ui-sref="app.customerDueInfo" ng-click="cashDueInfoEntry(user.name, 3000)" class="item item-avatar item-icon-right">
+                    <img src="img/customer.png">
+                    <h2>{{user.name}}</h2>
+                    <p>{{user.date}}</p>
+                    <i class="icon ion-chatbubble muted"></i>
+                </a>
+            </div>
+        </div>
+  </ion-content>
+</ion-view>
